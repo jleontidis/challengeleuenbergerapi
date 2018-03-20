@@ -22,10 +22,6 @@ composer install
 
 TODO: Write tests
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
 * [Lumen](https://lumen.laravel.com/) - The web framework used
