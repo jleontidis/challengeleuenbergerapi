@@ -17,7 +17,7 @@ class HockeyMatchController extends Controller
     public function list(){
 
         $matches = DB::table('hockeymatch')
-        ->where('isFinished', '<>', '1')
+        ->where('match_finished', '<>', '1')
         ->get();
 
         return response()->json($matches);
@@ -57,9 +57,9 @@ class HockeyMatchController extends Controller
         $match = HockeyMatch::find($id);
 
         
-        if(array_key_exists('half',$request->all())){
-            $result_first_half = Result::where(['match_id' => $id, 'half' => 'first'])->first();
-             $result_second_half = Result::where(['match_id' => $id, 'half' => 'second'])->first();
+        if(array_key_exists('match_half',$request->all())){
+            $result_first_half = Result::where(['match_id' => $id, 'match_half' => 'first'])->first();
+             $result_second_half = Result::where(['match_id' => $id, 'match_half' => 'second'])->first();
             
             if($result_first_half && $request->half  === 'first') {
                 $result_first_half->score_home = $request->score_home;

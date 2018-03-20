@@ -22,7 +22,7 @@ class CreateResultsTable extends Migration
             $table->text('away_logo_url');
             $table->tinyInteger('score_home');
             $table->tinyInteger('score_away');
-            $table->text('half');
+            $table->text('match_half');
             $table->boolean('game_played');
             $table->timestamps();
         });

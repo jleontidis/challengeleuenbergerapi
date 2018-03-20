@@ -24,7 +24,7 @@ class ResultsTableSeeder extends Seeder
 
             Result::create(array(
                 'match_id' => $match->id, 
-                'half' => 'first' ,
+                'match_half' => 'first' ,
                 'home_team' => $home_team->team_name,                 
                 'home_logo_url' => $home_team->logoUrl, 
                 'away_team'=> $away_team->team_name, 
@@ -33,7 +33,7 @@ class ResultsTableSeeder extends Seeder
 
             Result::create(array(
                 'match_id' => $match->id, 
-                'half' => 'second' ,
+                'match_half' => 'second' ,
                 'home_team' => $home_team->team_name,                 
                 'home_logo_url' => $home_team->logoUrl, 
                 'away_team'=> $away_team->team_name, 

@@ -17,14 +17,10 @@ class CreateMatchTable extends Migration
             $table->increments('id');
             $table->string('team_home_id');
             $table->string('team_away_id');
-            $table->dateTime('match_time');
-            $table->string('location');
-            $table->tinyInteger('score_home');
-            $table->tinyInteger('score_away');
-            $table->tinyInteger('score_home_2');
-            $table->tinyInteger('score_away_2');
-            $table->string('half');
-            $table->boolean('isFinished');
+            $table->dateTime('match_starting_time');
+            $table->string('match_location');
+            $table->string('match_half');
+            $table->boolean('match_finished');
             $table->timestamps();
         });
     }
